@@ -33,6 +33,6 @@ txt_timer = time.toString("hh:mm:ss")
 
 txt_age = 'Полных лет'
 txt_finalwin = 'Результаты'
-txt_index = 'Индекс Руфье'
-txt_workheart = 'Работоспособность сердца'
+txt_index = 'Индекс Руфье: '
+txt_workheart = 'Работоспособность сердца: '
 
