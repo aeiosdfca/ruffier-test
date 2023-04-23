@@ -1,8 +1,9 @@
-from PyQt5.QtCore import Qt
+from PyQt5.QtCore import Qt, QTimer, QTime, QLocale
+from PyQt5.QtGui import QDoubleValidator, QIntValidator, QFont # проверка типов вводимых значений
 from PyQt5.QtWidgets import (
         QApplication, QWidget,
         QHBoxLayout, QVBoxLayout,
-        QPushButton, QLabel, QListWidget, QLineEdit)
+        QPushButton, QLabel, QLineEdit)
 
 
 from instr import *
@@ -32,11 +33,11 @@ class MainWin(QWidget):
         self.hello_text = QLabel(txt_hello)
         self.instruction = QLabel(txt_instruction)
 
-        self.layout_line = QVBoxLayout()
-        self.layout_line.addWidget(self.hello_text, alignment = Qt.AlignCenter)
-        self.layout_line.addWidget(self.instruction, alignment = Qt.AlignCenter)
-        self.layout_line.addWidget(self.btn_next, alignment = Qt.AlignCenter)
-        self.setLayout(self.layout_line)
+        self.layout = QVBoxLayout()
+        self.layout.addWidget(self.hello_text, alignment = Qt.AlignCenter)
+        self.layout.addWidget(self.instruction, alignment = Qt.AlignCenter)
+        self.layout.addWidget(self.btn_next, alignment = Qt.AlignCenter)
+        self.setLayout(self.layout)
     
     def next_click(self):
         self.tw = TestWin()
