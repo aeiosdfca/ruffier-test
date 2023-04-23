@@ -28,7 +28,7 @@ class FinalWin(QWidget):
         if self.exp.age < 7:
             self.index = 0
             return "Нет данных такого возраста."
-        self.index = (4 * (int(self.ep.t1) + int(self.exp.t3)) - 200) / 10
+        self.index = (4 * (int(self.exp.t1) + int(self.exp.t3)) - 200) / 10
 
         if self.exp.age <= 0:
             if self.index <= 0:
